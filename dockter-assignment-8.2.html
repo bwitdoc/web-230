@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercise 8.2</title>
+  <style type="text/css">
+    ul {
+      list-style: none;
+      margin: 0 auto;
+      text-align: center;
+      font-style: Roboto;
+      font-size: 300, 400, 500;
+      top: 20px;
+    }
+    h2 {
+      margin: 0 auto;
+      background-color: salmon;
+      text-align: center;
+      font-size: 38px;
+    }
+  </style>
+  
+</head>
+<body>
+<div id="fruits"></div>
+
+<script>
+var fruits = ["Apple", "Orange", "Lemon", "Watermelon", "Strawberry"];
+var out = "<h2>Fruits</h2><ul>";
+
+    for (var x = 0; x < fruits.length; x++) {
+        out += "<li>" + fruits[x] + "</li>";
+    }
+    out += "</ul>";
+
+    document.getElementById('fruits').innerHTML = out;
+</script>
+
+</body>
+</html>
