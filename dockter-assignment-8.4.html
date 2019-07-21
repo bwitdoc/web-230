@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Assignment 8.4</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- you will need to the href to point to your root directories css file -->
+  <link rel="stylesheet" href="C:\Users\Brittany\Documents\WEB231\bu-webdev\web-231\GitHub Files\site.css">
+
+  <style type="text/css">
+    #employee tbody tr:hover {
+      cursor: pointer;
+      background-color: #ffff99;
+    }
+  </style>
+</head>
+<body>
+    <h1> Employee Listing </h1>
+<table>
+<tr>
+    <td>Id</td>
+    <td>First Name</td> 
+    <td>Last Name</td>
+    <td>Title</td>
+</tr>
+<tr>
+    <td><a href="#" class="employeeId">1</a></td>
+    <td>Bob</td>
+    <td>Hope</td>
+    <td>Chief Executive Officer</td>
+</tr>
+<tr>
+    <td><a href="#" class="employeeId">2</a></td>
+    <td>Sandra</td>
+    <td>Day</td>
+    <td>Chief Operations Officer</td>
+</tr>
+<tr>
+    <td><a href="#" class="employeeId">3</a></td>
+    <td>Matilda</td>
+    <td>Vernon</td>
+    <td>Senior Developer</td>
+</tr>
+<tr>
+    <td><a href="#" class="employeeId">4</a></td>
+    <td>Harold</td>
+    <td>Watson</td>
+    <td>Lead Designer</td>
+</tr>
+<tr>
+    <td><a href="#" class="employeeId">5</a></td>
+    <td>Jackson</td>
+    <td>LeMont</td>
+    <td>Junior Designer</td>
+</tr>
+<div id="emps"></div>
+
+<script type="text/javascript">
+ employees(id, firstName, lastName, title) 
+    this.id = id;
+    this.firstName = first;
+    this.lastName = last;
+    this.title = title;
+
+var employees = (
+    {
+        id: "1",
+        firstName: "Bob",
+        lastName: "Hope",
+        title: "CEO",
+    },
+    {
+        id: "2",
+        firstName: "Sandra",
+        lastName: "Day",
+        title: "COO",
+    },
+    {
+        id: "3",
+        firstName: "Matilda",
+        lastName: "Vernon",
+        title: "Senior Developer",
+    },
+    {
+        id: "4",
+        firstName: "Harold",
+        latName: "Watson",
+        title: "Lead Designer",
+    },
+    {
+        id: "5",
+        firstName: "Jackson",
+        lastName: "LeMont",
+        title: "Junior Designer",
+    }
+);
+
+  // jQuery onClick event
+  // Don't remove this, just add your code to the body of the event (curly braces)
+  $(function () {
+    $("table tr").click(function (event) {
+        event.preventDefault();
+        var employeesId = $(this).text();
+        var employeesfirstName = $(this).closest("td").next().text();
+        var employeeslastName = $(this).closest("td").next().text();
+        var employeesTitle = $(this).closest("td").next().text();
+    alert(employeesId + " " + employeesFirst + " " + employeesLast + " " + employeesTitle);
+  });
+</script>
+</body>
+</html>
