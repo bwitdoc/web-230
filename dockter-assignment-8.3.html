@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <title>Exercise 8.3</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- you will need to the href to point to your root directories css file -->
+  <link rel="stylesheet" href="C:\Users\Brittany\Documents\WEB231\bu-webdev\web-231\GitHub Files\site.css">
+    <style> 
+    .a, .b {
+        font: Roboto;
+        font-size: 300, 400, 500;
+        left: 20px;
+        top: 20px;
+    }
+    nav {
+        background-color: lightseagreen;
+        top: 0px;
+        font-size: 30px;
+    }
+    tr:nth-child(even) {
+        background-color: lightskyblue;
+    }
+    tr:nth-child(odd) {
+        background-color: lightslategray;
+    }
+    </style>
+</head>
+<div id="a"></div>
+<nav> Assignment 8.3 </nav>
+<body>
+    <h2> Lorem Ipsum </h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean porttitor turpis sed sodales venenatis. Proin eu mi nisi. Pellentesque dapibus, augue sit amet rutrum commodo, leo sapien sodales nunc, non vulputate quam felis sit amet purus. Etiam dui velit, sagittis sed mauris sit amet, malesuada placerat odio. Aliquam a efficitur lorem. Phasellus felis velit, eleifend sed finibus in, efficitur ut dolor. Curabitur ornare commodo libero, eget sagittis est convallis in. Nam commodo eros non ultricies maximus. Sed at ante non urna viverra scelerisque at sit amet odio. Nulla cursus laoreet risus eu viverra. Fusce a erat vel enim porta porta et eget lectus. Vestibulum volutpat rhoncus velit quis laoreet. Aenean nec arcu et felis lacinia mollis. Sed id eleifend dui. Aenean blandit efficitur ornare. Nunc gravida neque vitae diam accumsan, vitae accumsan leo sagittis.</p>
+    <button id="toggle"> Toggle </button>
+<script type="text/javascript">
+$("button").click (function() {
+    $("p").toggle();
+});
+</script>
+<div id="b"></div>
+<h2> Fruits </h2>
+<table>
+        <tr>
+            <td><a href="#" class="fruitId">1</a></td>
+            <td>Apple</td>
+        </tr>
+        <tr>
+            <td><a href="#" class="fruitId">2</a></td>
+            <td>Orange</td>
+        </tr>
+        <tr>
+            <td><a href="#" class="fruitId">3</a></td>
+            <td>Lemon</td>
+        </tr>
+        <tr> 
+            <td><a href="#" class="fruitId">4</a></td>
+            <td>Pear</td>
+        </tr>
+        <tr>
+            <td><a href="#" class="fruitId">5</a></td>
+            <td>Lime</td>
+        </tr>
+    </table>
+    <script> 
+    $(".fruitId").click(function (event) {
+            event.preventDefault();
+            var fruitId = $(this).text();
+            var fruitType = $(this).closest("td").next().text();
+            alert("{fruit_id: " + fruitId + ", fruit_type: " + fruitType + "}");
+        });
+    </script>
+</body>
+</html>
